@@ -1,7 +1,10 @@
-# Electron + Vue DnD (BlitzIt)
+# Electron + Vue DnD (Task Board)
 
 Desktop app built with Electron + Vite + Vue 3 + TypeScript. Provides Kanban-style drag-and-drop boards with scheduling, subtasks, and a dashboard with charts. State persists in localStorage.
 
+### Live Production URL:
+  http://vue-task-board-electron-app.netlify.app/#/
+  
 ## Quick Start
 
 ```bash

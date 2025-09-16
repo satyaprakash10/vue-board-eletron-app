@@ -39,5 +39,7 @@ appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
 publish:
-  provider: generic
-  url: https://example.com/auto-updates
+  provider: github
+  owner: satyaprakash10
+  repo: vue-board-eletron-app
+  # Set token via env: GH_TOKEN

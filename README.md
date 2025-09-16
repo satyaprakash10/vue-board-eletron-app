@@ -69,6 +69,24 @@ npm run dev
 
 - `npm run build` then `electron-builder` via scripts (`build:mac|win|linux`) to create distributables.
 
+
+## Short Guide: Tasks & UI Components
+
+- **Tasks: create**: In any column, click Add Task (header + or footer button), fill Title and Description (required), optionally pick a date/time and add subtasks, then click Add.
+- **Tasks: edit**: On a task, open the menu (•••) → Edit, update fields and subtasks, then Save.
+- **Tasks: delete**: Menu (•••) → Delete, confirm in the alert dialog.
+- **Drag between columns**: Grab a card to move; scheduled tasks prompt a detach confirmation when moving across sections.
+
+- **Dropdown menu**: Use `BaseDropdown` with `v-model` and `#trigger`; auto-closes on outside click and supports left/right alignment.
+- **Toast notifications**: Import `pushToast` from `Toast.vue` and call `pushToast('Message')` after actions (create/update/delete).
+- **Alert/confirm dialog**: Use `useConfirm().open('message')` to await a boolean; Escape or backdrop click cancels.
+
+- **Dark mode toggle**: Top-right Sun/Moon button toggles dark theme; persisted via `localStorage` and applied on startup in `theme-boot.ts`.
+- **Theme selection**: Current selector supports Light/Dark. Extendable to more themes via CSS variables and a dropdown tied to app state.
+
+- **Dashboard widgets**: KPIs show total/scheduled/unscheduled; charts (Chart.js) visualize scheduled tasks over time for quick trend analysis.
+
+
 ## Troubleshooting
 
 - If chart components fail, ensure `chart.js` and `vue-chartjs` versions match (v4/v5)
